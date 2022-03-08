@@ -1,0 +1,15 @@
+#sheet{
+    position: absolute;
+    display: none;
+    height: auto;
+    width: 100%;
+    background-color: white;
+}
+
+#formHolder{
+    width:30%;
+}
+
+#resultHolder{
+    display: none;
+}

@@ -1,0 +1,48 @@
+{% extends "github_analyzer/layout.html" %}
+{% load static %}
+
+
+{% block title %}GitHub repo analyzer{% endblock %}
+
+{% block body %}
+
+<div id="sheet">
+    <img class="mx-auto d-block" src="{% static 'github_analyzer//images/loading.gif' %}">
+</div>
+
+<div id="formHolder">
+<form action="" method="get">
+    {{ form }}
+    <div class="form-group">
+    <label for="repo_url">GitHUb repository url</label>
+    <input type="url" class="form-control" id="repo_url" placeholder="https://">
+    </div>
+    <input type="button" class="btn btn-primary" value="Submit" id="get_analysis">
+</form>
+</div>
+
+<div id="resultHolder">
+<table id="var_table">
+    <thead>
+        <tr><th>Filename</th>
+            <th>Risk Group</th>
+            <th>Model name</th>
+            <th>Total Hidden Layers</th>
+            <th>Relu</th>
+            <th>Sigmoid</th>
+            <th>Occurences</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+</div>
+
+{% endblock %}
+
+
+
+
+{% block script %}
+    <script src="{% static 'github_analyzer/script.js' %}"></script>
+{% endblock %}
